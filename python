@@ -35,6 +35,7 @@ while True:
         fullg=input("You can give a guess of full movie even: ").lower()
         if fullg==ranm:
             print("Wow you have won the game")
+            print(ranm+"!!!")
             break
 
         g=input("Give a guess of charachter: ").lower()
@@ -54,6 +55,7 @@ while True:
         q=0
         if str==ranm:
             print("Wow you have won the game")
+            print(ranm+"!!!")
             break
     if str!=ranm:
-        print("Sorry you lost the game")
+        print("Sorry you lost the game","movie was",ranm)
