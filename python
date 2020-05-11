@@ -1,0 +1,59 @@
+movie=['Udaan', 'Shahid', 'Zindagi na milegi dobara', 'The lunchbox', 'Lier dice', 'Queen', '1947 earth', 'Black Friday', 'That girl in a yellow boot', 'Last train to mahakali', 'Chak de India', 'Gangs of Wasseypur', 'Bhaag Milkha Bhaag', 'English Vinglish', 'Rang de Basanti', 'Taare zameen par', 'The Martian', 'Money Ball', 'A Beautiful Mind', 'Gladiator', 'Rain man', 'Pirates of the Caribbean Series0', 'Forrest Gump', 'Fight Club', 'Invictus', 'Dark Knight', 'Batman Begins', 'Dark Knight Rises', 'Brave Heart', 'Angry Men', 'Man on Fire', 'Taking of Pelhap', 'A Few Good Men', 'Independence Day', 'The Imitation Game', 'Saving Mr.Banks', 'The Curious Case of Benjamin Button', 'A walk to remember', 'P.S. I Love You', 'The Notebook', 'The Vow', 'The Holiday: Hans Zimmer ’s awesome music actually haunts you to watch this movie again and again.', 'Atonement', 'Cinderella Man', 'Million Dollar Baby', 'American Sniper', 'Warrior', 'Spy Game', 'Bourne Identity', 'Bourne Supremacy', 'Bourne Ultimatum']
+while True:
+    fullg=""
+    q=0
+
+    import random
+    ranm=random.choice(movie).lower()
+    print(ranm)
+    str="*"*len(ranm)
+    print(str)
+    i=0
+    for v in ranm:
+        str=list(str)
+        if v=="a":
+            str[i]="a"
+        if v=="i":
+            str[i]="i"
+        if v=="o":
+            str[i]="o"
+        if v=="u":
+            str[i]="u"
+        if v=="e":
+            str[i]="e"
+        if v==" ":
+            str[i]=" "
+        i=i+1
+    str="".join(str)
+    print(str)
+
+    name=input("So the game begins!!!\nwhat is  your name: ")
+    print("hey",name,"So the rules are simple of the game which we used to play in our childhood that is bollwood or some say hollywood\nYou have to simply guess the movie\nWith 5 chances and all the vowels will be already provided to you")
+    print("So here we go!!!")
+    for t in range(int(len(ranm)/1.5)):
+        print("Guessed movie:",str)
+        fullg=input("You can give a guess of full movie even: ").lower()
+        if fullg==ranm:
+            print("Wow you have won the game")
+            breaksf
+
+        g=input("Give a guess of charachter: ").lower()
+        print("\n\n\n\n\n\n")
+        f=0
+        for y in ranm:
+            if g==y:
+                str=list(str)
+                str[f]=y
+                str="".join(str)
+                q=1
+            f=f+1
+        if q==1:
+            print("Nice guess")
+        else:
+            print("Try..")
+        q=0
+        if str==ranm:
+            print("Wow you have won the game")
+            break
+    if str!=ranm:
+        print("Sorry you lost the game")
