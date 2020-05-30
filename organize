@@ -17,4 +17,6 @@ for files in a:
             pt=os.path.join(dir,files)
             e=dir+"\\"+d[c]
             shutil.move(pt,e)
+            
+            ##
 
