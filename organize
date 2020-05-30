@@ -1,0 +1,20 @@
+import os
+import shutil
+
+b=["jpg","txt","pdf","png","mp4","dwg" ]
+d=["image","text","pdf","icons","videos","autocad proj"]
+path=[]
+dir=input()
+a=os.listdir(dir)
+for c in range(len(d)):
+    os.chdir(dir)
+    os.mkdir(d[c])
+            
+
+for files in a:
+    for c in range(len(b)):
+        if(files[-3:]==b[c]):
+            pt=os.path.join(dir,files)
+            e=dir+"\\"+d[c]
+            shutil.move(pt,e)
+
